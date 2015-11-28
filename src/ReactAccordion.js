@@ -1,9 +1,9 @@
 import React, { Component, PropTypes } from 'react';
-import ListHeader from './lib/ListHeader';
-import ListItemsManager from './lib/ListItemsManager';
+import Header from './lib/Header';
+import ContentManager from './lib/ContentManager';
 import { Motion, spring } from "react-motion";
 
-export default class ReactListView extends Component {
+export default class ReactAccordion extends Component {
   static propTypes = {
     data: PropTypes.array.isRequired,
     headerAttName: PropTypes.string.isRequired,
@@ -53,7 +53,7 @@ export default class ReactListView extends Component {
                 ({h}) => (
                   <div key={k}>
                     <li li={li}>
-                      <ListHeader
+                      <Header
                         ref={headerRef}
                         header={header}
                         headerIndex={index}
@@ -66,7 +66,7 @@ export default class ReactListView extends Component {
                           overflow: `hidden`,
                           height:`${h}`
                           }}>
-                        <ListItemsManager
+                        <ContentManager
                          ref={itemRef}
                          items={items}
                          styles={listItems}

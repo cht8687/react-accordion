@@ -1,3 +1,3 @@
-import ReactExpandableListView from './ReactExpandableListView';
-export default ReactExpandableListView;
+import ReactAccordion from './ReactAccordion';
+export default ReactAccordion;
 

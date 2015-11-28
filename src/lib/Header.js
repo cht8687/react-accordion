@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 
-export default class ListHeader extends Component {
+export default class Header extends Component {
   static propTypes = {
     header: PropTypes.string.isRequired,
     headerIndex: PropTypes.number.isRequired,

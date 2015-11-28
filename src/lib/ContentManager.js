@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
-import ListItem from './ListItem';
+import ListItem from './Content';
 
-export default class ListItemsManager extends Component {
+export default class ContentManager extends Component {
   static propTypes = {
     items: PropTypes.array.isRequired,
     styles: PropTypes.object.isRequired
