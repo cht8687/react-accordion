@@ -3,7 +3,7 @@
 
 - React implementation of Accordion using React-motion.
 
-![React Listview sticky header](src/example/react-accordion.gif)
+![React Accordion](src/example/react-accordion.gif)
 
 ## Installation
 
