@@ -23,13 +23,14 @@ let styles = {
   listHeader: {
     width: '383px',
     height: '20px',
-    background: '#3E5DDA',
+    background: 'grey',
     color: 'white',
-    padding: '5px 0px 5px 20px'
+    padding: '5px 0px 5px 20px',
+    marginBottom: '3px'
   },
 
   listItems: {
-    margin: '2px'
+    color: 'blue'
   },
 };
 
