@@ -5,7 +5,7 @@ let styles = {
   outerDiv: {
     overflowY: 'auto',
     outline: '1px solid #ADBCE0',
-    width: '383px',
+    width: '410px',
   },
 
   ul: {
@@ -21,7 +21,7 @@ let styles = {
   },
 
   listHeader: {
-    width: '383px',
+    width: '390px',
     height: '20px',
     background: 'grey',
     color: 'white',
