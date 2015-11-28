@@ -64,7 +64,8 @@ export default class ReactAccordion extends Component {
                         style={{
                           display: `block`,
                           overflow: `hidden`,
-                          height:`${h}`
+                          height:`${h}`,
+                          ...listItems
                           }}>
                         <ContentManager
                          ref={itemRef}

@@ -1,7 +1,7 @@
 {
   "name": "react-accordion-component",
   "version": "0.0.1",
-  "description": "Convert a pair of headers and content panels into an accordion.",
+  "description": "display headers and content panels into as an accordion.",
   "main": "dist/index.js",
   "scripts": {
     "prepublish": "parallelshell -w \"npm run build:dist -s\" \"npm run build:example -s\" \"npm run build:bower -s\"",

@@ -3,10 +3,9 @@ import ReactAccordion from '..';
 
 let styles = {
   outerDiv: {
-    height: '400px',
     overflowY: 'auto',
-    outline: '1px dashed blue',
-    width: '400px',
+    outline: '1px solid #ADBCE0',
+    width: '383px',
   },
 
   ul: {
@@ -24,12 +23,14 @@ let styles = {
   listHeader: {
     width: '383px',
     height: '20px',
-    background: 'orange',
-    color: 'white'
+    background: 'grey',
+    color: 'white',
+    padding: '5px 0px 5px 20px'
   },
 
   listItems: {
-    color: 'blue'
+    color: 'blue',
+    margin: '2px'
   },
 };
 
