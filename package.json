@@ -1,8 +1,7 @@
 {
-  "name": "InKnockKnock",
-  "version": "0.1.0",
-  "name": "react-expandable-listview",
-  "description": "listview which can be expanded to show its children",
+  "name": "react-accordion-component",
+  "version": "0.0.1",
+  "description": "Convert a pair of headers and content panels into an accordion.",
   "main": "dist/index.js",
   "scripts": {
     "prepublish": "parallelshell -w \"npm run build:dist -s\" \"npm run build:example -s\" \"npm run build:bower -s\"",
@@ -12,12 +11,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cht8687/InKnockKnock.git"
+    "url": "git+https://github.com/cht8687/react-accordion.git"
   },
   "keywords": [
     "react",
     "react-component",
-    "component"
+    "component",
+    "react-motion",
+    "react-listview",
+    "react-accordion",
+    "accordion",
+    "expandable"
   ],
   "files": [
     "dist"
@@ -25,9 +29,9 @@
   "author": "Robert Chang <cht8687@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/cht8687/InKnockKnock.git/issues"
+    "url": "https://github.com/cht8687/react-accordion/issues"
   },
-  "homepage": "https://github.com/cht8687/InKnockKnock.git",
+  "homepage": "https://github.com/cht8687/react-accordion#readme",
   "peerDependencies": {
     "react": "^0.13.3"
   },
