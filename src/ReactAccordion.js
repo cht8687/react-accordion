@@ -6,6 +6,7 @@ import { Motion, spring } from "react-motion";
 export default class ReactAccordion extends Component {
   static propTypes = {
     data: PropTypes.array.isRequired,
+    options: PropTypes.object.isRequired,
     headerAttName: PropTypes.string.isRequired,
     itemsAttName: PropTypes.string.isRequired,
     styles: PropTypes.object.isRequired
@@ -88,7 +89,17 @@ export default class ReactAccordion extends Component {
 
   handleToggle(headerIndex) {
     let { data } = this.state;
+    const { options: { autoClapse } } = this.props;
     let dataCopy = data;
+
+    if(autoClapse) {
+      dataCopy.forEach((e, index) => {
+        if(index != headerIndex) {
+          e.isOpened = false;
+        }
+      });
+    }
+
     dataCopy[headerIndex].isOpened = !dataCopy[headerIndex].isOpened;
     const newData = Object.assign({}, dataCopy);
 

@@ -23,27 +23,28 @@ let styles = {
   listHeader: {
     width: '383px',
     height: '20px',
-    background: 'grey',
+    background: '#3E5DDA',
     color: 'white',
     padding: '5px 0px 5px 20px'
   },
 
   listItems: {
-    color: 'blue',
     margin: '2px'
   },
 };
 
 class App extends Component {
   static propTypes = {
-    data: PropTypes.array.isRequired
+    data: PropTypes.array.isRequired,
+    options: PropTypes.object.isRequired
   };
 
   render() {
-   const { data } = this.props;
+   const { data, options } = this.props;
     return (
       <ReactAccordion 
         data={data} 
+        options={options}
         headerAttName="headerName"
         itemsAttName="items" 
         styles={styles}
@@ -80,4 +81,8 @@ const DATA = [
   },
 ];
 
-React.render(<App data= {DATA} />, document.body);
+const OPTIONS = {
+  autoClapse: true,
+}
+  
+React.render(<App data= {DATA} options={OPTIONS} />, document.body);
