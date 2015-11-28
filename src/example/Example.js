@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import ReactExpandableListView from '..';
+import ReactAccordion from '..';
 
 let styles = {
   outerDiv: {
@@ -41,7 +41,7 @@ class App extends Component {
   render() {
    const { data } = this.props;
     return (
-      <ReactExpandableListView 
+      <ReactAccordion 
         data={data} 
         headerAttName="headerName"
         itemsAttName="items" 
@@ -51,124 +51,32 @@ class App extends Component {
   }
 }
 
-const DATALIST = [
+const DATA = [
   {
-    headerName : "ListA",
+    headerName : "Section 1",
     isOpened: true,
     items : [{
-      title : "items1"
-    }, {
-      title : "items2"
-    }, {
-      title : "items3"
-    },{
-      title : "items4"
-    },{
-      title : "items5"
-    },{
-      title : "items6"
+      paragraph : "Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate."
     }]
   }, {
-    headerName : "ListB",
-    isOpened: true,
+    headerName : "Section 2",
+    isOpened: false,
     items : [{
-      title : "items1"
-    }, {
-      title : "items2"
-    }, {
-      title : "items3"
-    },{
-      title : "items4"
-    },{
-      title : "items5"
-    },{
-      title : "items6"
+      paragraph : "Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate."
     }]
   },{
-    headerName : "ListC",
-    isOpened: true,
+    headerName : "Section 3",
+    isOpened: false,
     items : [{
-      title : "items1"
-    }, {
-      title : "items2"
-    }, {
-      title : "items3"
-    },{
-      title : "items4"
-    },{
-      title : "items5"
-    },{
-      title : "items6"
+      paragraph : "Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate."
     }]
   },{
-    headerName : "ListD",
-    isOpened: true,
+    headerName : "Section 4",
+    isOpened: false,
     items : [{
-      title : "items1"
-    }, {
-      title : "items2"
-    }, {
-      title : "items3"
-    },{
-      title : "items4"
-    },{
-      title : "items5"
-    },{
-      title : "items6"
+      paragraph : "Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate."
     }]
-  },{
-    headerName : "ListE",
-    isOpened: true,
-    items : [{
-      title : "items1"
-    }, {
-      title : "items2"
-    }, {
-      title : "items3"
-    },{
-      title : "items4"
-    },{
-      title : "items5"
-    },{
-      title : "items6"
-    }]
-  },{
-    headerName : "ListF",
-    isOpened: true,
-    items : [{
-      title : "items1"
-    }, {
-      title : "items2"
-    }, {
-      title : "items3"
-    }]
-  },{
-    headerName : "ListG",
-    isOpened: true,
-    items : [{
-      title : "items1"
-    }, {
-      title : "items2"
-    }, {
-      title : "items3"
-    },{
-      title : "items4"
-    },{
-      title : "items5"
-    },{
-      title : "items6"
-    }]
-  },{
-    headerName : "ListH",
-    isOpened: true,
-    items : [{
-      title : "items1"
-    }, {
-      title : "items2"
-    }, {
-      title : "items3"
-    }]
-  }
+  },
 ];
 
-React.render(<App data= {DATALIST} />, document.body);
+React.render(<App data= {DATA} />, document.body);
