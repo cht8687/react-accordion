@@ -1,7 +1,7 @@
 # React Accordion
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/cht8687/help)
 
-- Convert a pair of headers and content panels into an accordion.
+- React implementation of Accordion using React-motion.
 
 
 This project is under development.
