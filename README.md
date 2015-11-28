@@ -15,7 +15,7 @@ $ npm install --save react-accordion-components
 
 ## Demo
 
-[http://cht8687.github.io/react-accordion/example/](http://cht8687.github.io/accordion/example/)
+[http://cht8687.github.io/react-accordion/example/](http://cht8687.github.io/react-accordion/example/)
 
 ## Usage
 
