@@ -1,5 +1,9 @@
 import React, { Component, PropTypes } from 'react';
 import ReactAccordion from '..';
+import {
+  DATA,
+  OPTIONS
+} from './const';
 
 let styles = {
   outerDiv: {
@@ -54,36 +58,5 @@ class App extends Component {
   }
 }
 
-const DATA = [
-  {
-    headerName : "Section 1",
-    isOpened: true,
-    items : [{
-      paragraph : "Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate."
-    }]
-  }, {
-    headerName : "Section 2",
-    isOpened: false,
-    items : [{
-      paragraph : "Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate."
-    }]
-  },{
-    headerName : "Section 3",
-    isOpened: false,
-    items : [{
-      paragraph : "Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate."
-    }]
-  },{
-    headerName : "Section 4",
-    isOpened: false,
-    items : [{
-      paragraph : "Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate."
-    }]
-  },
-];
-
-const OPTIONS = {
-  autoClapse: true,
-}
   
 React.render(<App data= {DATA} options={OPTIONS} />, document.body);
