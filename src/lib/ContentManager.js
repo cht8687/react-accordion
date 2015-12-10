@@ -12,11 +12,11 @@ export default class ContentManager extends Component {
     return (
       <span>
       {
-        Object.keys(items).map((index) => {
+        [...items].map((item, index) => {
           return (
             <ListItem 
               key={index}
-              item={items[index]}
+              item={item.paragraph}
               styles={styles}
             />
           );

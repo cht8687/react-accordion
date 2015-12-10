@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import { render } from 'react-dom';
 import ReactAccordion from '..';
 import {
   DATA,
@@ -58,5 +59,10 @@ class App extends Component {
   }
 }
 
+
+const appRoot = document.createElement('div');
+appRoot.id = 'app';
+document.body.appendChild(appRoot);
+
+render(<App data= {DATA} options={OPTIONS}/>, appRoot);
   
-React.render(<App data= {DATA} options={OPTIONS} />, document.body);
