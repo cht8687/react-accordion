@@ -48,12 +48,13 @@ export default class ReactAccordion extends Component {
 
           return (
             <Motion
+              key={index}
               defaultStyle={{h: 0}}
               style={{h: spring(isOpened ? 110 : 0)}}>
               {
                 ({h}) => (
-                  <div key={k}>
-                    <li li={li}>
+                  <div>
+                    <li>
                       <Header
                         ref={headerRef}
                         header={header}
