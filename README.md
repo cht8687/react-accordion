@@ -164,7 +164,7 @@ let styles = {
 
 ```
 $ git clone git@github.com:cht8687/react-accordion.git
-$ cd react-slider
+$ cd react-accordion
 $ npm install
 $ webpack-dev-server
 ```
