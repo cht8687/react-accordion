@@ -8,9 +8,8 @@ export default class ReactAccordion extends Component {
     data: PropTypes.array.isRequired,
     options: PropTypes.object.isRequired,
     headerAttName: PropTypes.string.isRequired,
-    itemsAttName: PropTypes.string.isRequired,
-    styles: PropTypes.object.isRequired
-  }
+    itemsAttName: PropTypes.string.isRequired
+  };
 
   constructor(props) {
     super(props);
@@ -22,7 +21,6 @@ export default class ReactAccordion extends Component {
 
   render() {
     const { headerAttName, itemsAttName } = this.props;
-    const { styles: {outerDiv, ul, listHeader, listItems, li} } = this.props;
     const { data } = this.state;
 
     let _refi = 0;
@@ -35,13 +33,14 @@ export default class ReactAccordion extends Component {
     };
 
     return (
-      <div ref="listview" style={outerDiv}>
-        <ul style={ul}>
+      <div ref="listview" className="react-accordion_outerDiv">
+        <ul className="react-accordion_ul">
         {
           Object.keys(data).map((k, index) => {
           const header = data[k][headerAttName];
           const items  = data[k][itemsAttName];
           const { isOpened } = data[k];
+          const { height } = data[k];
           _refi++;
           const headerRef = makeHeaderRef();
           const itemRef = makeItemRef();
@@ -50,7 +49,7 @@ export default class ReactAccordion extends Component {
             <Motion
               key={index}
               defaultStyle={{h: 0}}
-              style={{h: spring(isOpened ? 110 : 0)}}>
+              style={{h: spring(isOpened ? height : 0)}}>
               {
                 ({h}) => (
                   <div>
@@ -59,20 +58,19 @@ export default class ReactAccordion extends Component {
                         ref={headerRef}
                         header={header}
                         headerIndex={index}
-                        styles={listHeader}
+                        className="react-accordion_listHeader"
                         handleToggle={this.handleToggle.bind(this, index)}
                       />
                       <div
                         style={{
                           display: `block`,
                           overflow: `hidden`,
-                          height:`${h}`,
-                          ...listItems
+                          height:`${h}`
                           }}>
                         <ContentManager
                          ref={itemRef}
                          items={items}
-                         styles={listItems}
+                         className="react-accordion_listItems"
                         />
                       </div>
                     </li>

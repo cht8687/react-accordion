@@ -53,7 +53,7 @@ $ npm install --save react-accordion-components
 
 [http://cht8687.github.io/react-accordion/example/](http://cht8687.github.io/react-accordion/example/)
 
-## Usage
+## API
 
 ```js
 <ReactAccordion 
@@ -61,11 +61,10 @@ $ npm install --save react-accordion-components
         options={options}
         headerAttName="headerName"
         itemsAttName="items" 
-        styles={styles}
       />
 ```
 
-## Options
+The component accepts three props.
 
 #### `data`: PropTypes.array.isRequired
 
@@ -76,28 +75,35 @@ const DATA = [
     isOpened: true,
     items : [{
       paragraph : "Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate."
-    }]
+    }],
+    height: 100
   }, {
     headerName : "Section 2",
     isOpened: false,
     items : [{
       paragraph : "Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate."
-    }]
+    }],
+    height: 100
   },{
     headerName : "Section 3",
     isOpened: false,
     items : [{
       paragraph : "Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate."
-    }]
+    }],
+    height: 100
   },{
     headerName : "Section 4",
     isOpened: false,
     items : [{
       paragraph : "Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate."
-    }]
+    }],
+    height: 100
   },
 ];
 ```
+
+`height` controls how much height that certain cell will be look like.
+This helps you when you have different contents length.
 
 #### `options`: PropTypes.object.isRequired
 
@@ -110,7 +116,6 @@ const OPTIONS = {
 
 ```
 
-
 #### `headerAttName`: PropTypes.string.isRequired
 
 variable name of section header in your `data` object.
@@ -121,44 +126,12 @@ In above example, it's `headerName`.
 variable name which hold items data in your `data` object.
 In above example, it's `items`.
 
-#### `styles`: PropTypes.object.isRequired
+## Styling
 
-```js
-let styles = {
-  outerDiv: {
-    overflowY: 'auto',
-    outline: '1px solid #ADBCE0',
-    width: '410px',
-  },
+The CSS is flexible, commented and made to be easily customized.
 
-  ul: {
-    margin: '0px',
-    listStyleType: 'none',
-    padding: '0'
-  },
-
-  fixedPosition: {
-    position : 'fixed',
-    width : '383px',
-    top: '0px'
-  },
-
-  listHeader: {
-    width: '390px',
-    height: '20px',
-    background: 'grey',
-    color: 'white',
-    padding: '5px 0px 5px 20px',
-    marginBottom: '3px'
-  },
-
-  listItems: {
-    color: 'blue'
-  },
-};
-```
-
-`outerDiv`, `ul`, `fixedPosition`, `listHeader`, `listItems` are required, you can modify the CSS to meet your needs, make your own style.
+There is an CSS file in the root level you can include it in your project.
+[CSS code](https://github.com/cht8687/react-accordion/tree/master/react-accordion.css).
 
 ## Development
 
