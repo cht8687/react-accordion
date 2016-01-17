@@ -4,14 +4,13 @@ export default class Header extends Component {
   static propTypes = {
     header: PropTypes.string.isRequired,
     headerIndex: PropTypes.number.isRequired,
-    styles: PropTypes.object.isRequired,
     handleToggle: PropTypes.func.isRequired
   };
 
   render() {
-    const { header, headerIndex, styles } = this.props;
+    const { header, headerIndex } = this.props;
     return (
-      <div ref="header" style={styles} onClick={this.handleClick.bind(this, headerIndex)}>{header}</div>
+      <div ref="header" className="react-accordion_listHeader" onClick={this.handleClick.bind(this, headerIndex)}>{header}</div>
     );
   }  
 

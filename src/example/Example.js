@@ -5,39 +5,7 @@ import {
   DATA,
   OPTIONS
 } from './const';
-
-let styles = {
-  outerDiv: {
-    overflowY: 'auto',
-    outline: '1px solid #ADBCE0',
-    width: '410px',
-  },
-
-  ul: {
-    margin: '0px',
-    listStyleType: 'none',
-    padding: '0'
-  },
-
-  fixedPosition: {
-    position : 'fixed',
-    width : '383px',
-    top: '0px'
-  },
-
-  listHeader: {
-    width: '390px',
-    height: '20px',
-    background: 'grey',
-    color: 'white',
-    padding: '5px 0px 5px 20px',
-    marginBottom: '3px'
-  },
-
-  listItems: {
-    color: 'blue'
-  },
-};
+import "../../react-accordion.css";
 
 class App extends Component {
   static propTypes = {
@@ -53,7 +21,6 @@ class App extends Component {
         options={options}
         headerAttName="headerName"
         itemsAttName="items" 
-        styles={styles}
       />
     );
   }
