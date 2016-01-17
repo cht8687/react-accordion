@@ -1,6 +1,6 @@
 {
   "name": "react-accordion-components",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "display headers and content panels into as an accordion.",
   "main": "dist/index.js",
   "scripts": {
