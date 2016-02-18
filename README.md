@@ -4,8 +4,8 @@
 <big><h1 align="center">React implementation of Accordion.</h1></big>
 
 <p align="center">
-  <a href="https://circleci.com/gh/cht8687/react-accordion-components">
-    <img src="https://circleci.com/gh/cht8687/react-accordion-components.svg?style=shield"
+<a href="https://circleci.com/gh/cht8687/react-accordion">
+    <img src="https://circleci.com/gh/cht8687/react-accordion.svg?style=shield"
          alt="Circle CI">
   </a>
 
