@@ -4,6 +4,11 @@
 <big><h1 align="center">React implementation of Accordion.</h1></big>
 
 <p align="center">
+  <a href="https://circleci.com/gh/cht8687/react-accordion-components">
+    <img src="https://circleci.com/gh/cht8687/react-accordion-components.svg?style=shield"
+         alt="Circle CI">
+  </a>
+
   <a href="https://www.npmjs.com/package/react-accordion-components">
     <img src="https://img.shields.io/npm/v/react-accordion-components.svg?style=flat-square"
          alt="NPM Version">
