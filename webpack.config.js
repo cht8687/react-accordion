@@ -28,7 +28,8 @@ module.exports = {
           include: [path.resolve('src')]
         }, {
           test: /\.css$/, // Only .css files
-          loader: 'style!css' // Run both loaders
+          loader: 'style!css', // Run both loaders
+          include: [path.resolve('src')]
         }
       ],
       preLoaders: [

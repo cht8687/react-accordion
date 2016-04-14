@@ -5,7 +5,6 @@ import {
   DATA,
   OPTIONS
 } from './const';
-import "../../react-accordion.css";
 
 class App extends Component {
   static propTypes = {
