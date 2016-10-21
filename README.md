@@ -46,6 +46,10 @@
 
 ![React Accordion](src/example/react-accordion.gif)
 
+## Philosophy
+
+>You don't need jQuery to do this...
+
 ## Installation
 
 ### npm
@@ -73,11 +77,14 @@ The component accepts three props.
 
 #### `data`: PropTypes.array.isRequired
 
+### Render plain object
+
 ```js
 const DATA = [
   {
     headerName : "Section 1",
     isOpened: true,
+    isReactComponent: false,
     items : [{
       paragraph : "Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate."
     }],
@@ -85,6 +92,7 @@ const DATA = [
   }, {
     headerName : "Section 2",
     isOpened: false,
+    isReactComponent: false,
     items : [{
       paragraph : "Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate."
     }],
@@ -92,6 +100,7 @@ const DATA = [
   },{
     headerName : "Section 3",
     isOpened: false,
+    isReactComponent: false,
     items : [{
       paragraph : "Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate."
     }],
@@ -99,6 +108,7 @@ const DATA = [
   },{
     headerName : "Section 4",
     isOpened: false,
+    isReactComponent: false,
     items : [{
       paragraph : "Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate."
     }],
@@ -107,8 +117,104 @@ const DATA = [
 ];
 ```
 
+### Render react component 
+
+If you want to render a react component, for example, a menu object, you can set `isReactComponent` to `true`:
+
+```js
+export default class Menu extends React.Component {
+  static get menuItems() {
+    return [
+      {
+        headerName: 'Products',
+        isOpened: false,
+        height: 100,
+        isReactComponent: true,
+        items: [
+          (
+          <Link
+            to="admin/products/all"
+            className="btn btn-default"
+            activeClassName="active"
+          >
+            All
+          </Link>
+          ),
+          (
+          <Link
+            to="admin/products/expired"
+            className="btn btn-default"
+            activeClassName="active"
+          >
+            Expired
+          </Link>
+          ),
+          (
+          <Link
+            to="admin/products/submitted"
+            className="btn btn-default"
+            activeClassName="active"
+          >
+            Submitted
+          </Link>
+          ),
+        ],
+      },
+      {
+        headerName: 'Promotions',
+        isOpened: false,
+        height: 100,
+        isReactComponent: true,
+        items: [
+          (
+          <Link
+            to="admin/promotions/active"
+            className="btn btn-default"
+            activeClassName="active"
+          >
+            Active
+          </Link>
+          ),
+       ],
+      },
+      {
+        headerName: 'Settings',
+        isOpened: false,
+        height: 100,
+        isReactComponent: true,
+        items: [
+          (
+          <Link
+            to="admin/settings/all"
+            className="btn btn-default"
+            activeClassName="active"
+          >
+            Al
+          </Link>
+          ),
+        ],
+      },
+    ];
+  }
+
+  render() {
+    return (
+      <div id="admin-menu">
+        <ReactExpandableListView
+          data={this.constructor.menuItems}
+          headerAttName="headerName"
+          itemsAttName="items"
+        />
+      </div>
+    );
+  }
+}
+
+```
+
 `height` controls how much height that certain cell will be look like.
 This helps you when you have different contents length.
+
 
 #### `options`: PropTypes.object.isRequired
 

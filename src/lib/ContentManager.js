@@ -3,20 +3,20 @@ import ListItem from './Content';
 
 export default class ContentManager extends Component {
   static propTypes = {
-    items: PropTypes.array.isRequired
+    items: PropTypes.array.isRequired,
+    isReactComponent: PropTypes.bool
   };
 
   render() {
-    const { items } = this.props;
+    const { items, isReactComponent } = this.props;
     return (
       <span>
       {
         [...items].map((item, index) => {
           return (
-            <ListItem 
-              key={index}
-              item={item.paragraph}
-            />
+            <ListItem key={index} isReactComponent={isReactComponent}>
+              {item}
+            </ListItem>
           );
         })
       }

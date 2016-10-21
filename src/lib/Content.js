@@ -2,14 +2,20 @@ import React, { Component, PropTypes } from 'react';
 
 
 export default class Content extends Component {
-  static propTypes = {
-    item: PropTypes.string.isRequired
-  };
+   static get propTypes() {
+    return {
+      children: React.PropTypes.object,
+      isReactComponent: React.PropTypes.bool
+    };
+  }
 
   render() {
-    const { item } = this.props;
+    const { isReactComponent } = this.props;
     return (
-      <span className="react-accordion_listItems">{item}<br /></span>
+      <span className="react-accordion_listItems">
+        { isReactComponent ? this.props.children : this.props.children.title }
+        <br />
+      </span>
     );
   }
 }

@@ -39,6 +39,7 @@ export default class ReactAccordion extends Component {
           Object.keys(data).map((k, index) => {
           const header = data[k][headerAttName];
           const items  = data[k][itemsAttName];
+          const { isReactComponent } = data[k];
           const { isOpened } = data[k];
           const { height } = data[k];
           _refi++;
@@ -70,6 +71,7 @@ export default class ReactAccordion extends Component {
                         <ContentManager
                          ref={itemRef}
                          items={items}
+                         isReactComponent={isReactComponent}
                          className="react-accordion_listItems"
                         />
                       </div>
