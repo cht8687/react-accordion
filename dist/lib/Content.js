@@ -30,22 +30,27 @@ var Content = function (_Component) {
   _createClass(Content, [{
     key: "render",
     value: function render() {
-      var item = this.props.item;
+      var isReactComponent = this.props.isReactComponent;
 
       return _react2.default.createElement(
         "span",
         { className: "react-accordion_listItems" },
-        item,
+        isReactComponent ? this.props.children : this.props.children.title,
         _react2.default.createElement("br", null)
       );
+    }
+  }], [{
+    key: "propTypes",
+    get: function get() {
+      return {
+        children: _react2.default.PropTypes.object,
+        isReactComponent: _react2.default.PropTypes.bool
+      };
     }
   }]);
 
   return Content;
 }(_react.Component);
 
-Content.propTypes = {
-  item: _react.PropTypes.string.isRequired
-};
 exports.default = Content;
 //# sourceMappingURL=Content.js.map

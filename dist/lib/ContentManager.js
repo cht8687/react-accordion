@@ -36,16 +36,19 @@ var ContentManager = function (_Component) {
   _createClass(ContentManager, [{
     key: 'render',
     value: function render() {
-      var items = this.props.items;
+      var _props = this.props;
+      var items = _props.items;
+      var isReactComponent = _props.isReactComponent;
 
       return _react2.default.createElement(
         'span',
         null,
         [].concat(_toConsumableArray(items)).map(function (item, index) {
-          return _react2.default.createElement(_Content2.default, {
-            key: index,
-            item: item.paragraph
-          });
+          return _react2.default.createElement(
+            _Content2.default,
+            { key: index, isReactComponent: isReactComponent },
+            item
+          );
         })
       );
     }
@@ -55,7 +58,8 @@ var ContentManager = function (_Component) {
 }(_react.Component);
 
 ContentManager.propTypes = {
-  items: _react.PropTypes.array.isRequired
+  items: _react.PropTypes.array.isRequired,
+  isReactComponent: _react.PropTypes.bool
 };
 exports.default = ContentManager;
 //# sourceMappingURL=ContentManager.js.map
