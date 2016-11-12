@@ -24,7 +24,7 @@
   </a>
 
   <a href="https://npmjs.org/package/react-accordion-components">
-    <img src="http://img.shields.io/npm/dm/react-accordion.svg?style=flat-square"
+    <img src="http://img.shields.io/npm/dm/react-accordion-components.svg?style=flat-square"
          alt="Downloads">
   </a>
 
