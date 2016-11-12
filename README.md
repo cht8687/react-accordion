@@ -18,12 +18,12 @@
     <img src="https://coveralls.io/repos/cht8687/react-accordion/badge.svg?branch=master&service=github" alt="Coverage Status" />
  </a>
 
-  <a href="https://travis-ci.org/cht8687/react-accordion">
+  <a href="https://travis-ci.org/cht8687/react-accordion-components">
     <img src="https://img.shields.io/travis/cht8687/react-accordion.svg?style=flat-square"
          alt="Build Status">
   </a>
 
-  <a href="https://npmjs.org/package/react-accordion">
+  <a href="https://npmjs.org/package/react-accordion-components">
     <img src="http://img.shields.io/npm/dm/react-accordion.svg?style=flat-square"
          alt="Downloads">
   </a>
